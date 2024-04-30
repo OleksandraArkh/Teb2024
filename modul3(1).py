@@ -92,11 +92,106 @@ print("Ready or not, here I come!")
 # Napisz funkcję print, która wyświetli wiadomość końcową.
 print()
 print("3.2.1.9 LABORATORIUM: Instrukcja break - Utknięcie w pętli")
-#n=str(input"Wpisz slowo:")
-#while n!=pumpernikiel
-#    n=(input"Wpisz inne slowo:")
-#    if n==pumpernikiel:
-#        break
-#    print("Udalo ci sie opuscic petle")
+n=str(input("Wpisz slowo: "))
+while n=='pumpernikiel':
+        print("Udalo ci sie opuscic petle")
+        break
+if n!='pumpernikiel':
+    n=(input("Wpisz inne slowo(pumpernikiel): "))
+    while n=='pumpernikiel':
+        print("Udalo ci sie opuscic petle")
+        break
+    if n!='pumpernikiel':
+        print("Nie bede cie torturowac, idz i odpoczni.")
 print()
 print("3.2.1.10 LABORATORIUM: continue - Brzydki Zjadacz Samogłosek")
+slowo_uzytkownika=str(input("Wpisz slowo: "))# Poproś użytkownika o wprowadzenie słowa
+# i przypisz je do zmiennej slowo_uzytkownika
+slowo_uzytkownika = slowo_uzytkownika.upper()
+
+for litera in slowo_uzytkownika:
+    if litera=='A':
+        litera=''
+        continue
+    elif litera=='E':
+        litera=''
+        continue
+    elif litera=='I':
+        litera=''
+        continue
+    elif litera=='O':
+        litera=''
+        continue
+    elif litera=='U':
+        litera=''
+    print(litera)
+    continue
+    # Uzupełnij pętlę for poniżej.
+print()
+print("koniec")
+print()
+print("3.2.1.11 LABORATORIUM: continue - Ładny Zjadacz Samogłosek")
+slowo_bez_samoglosek = ""
+
+slowo_uzytkownika=str(input("Wpisz slowo: "))# Poproś użytkownika o wprowadzenie słowa
+# i przypisz je do zmiennej slowo_uzytkownika.
+slowo_uzytkownika = slowo_uzytkownika.upper()
+
+for litera in slowo_uzytkownika:
+    if litera=='A':
+        litera=''
+        continue
+    elif litera=='E':
+        litera=''
+        continue
+    elif litera=='I':
+        litera=''
+        continue
+    elif litera=='O':
+        litera=''
+        continue
+    elif litera=='U':
+        litera=''
+    slowo_bez_samoglosek=slowo_bez_samoglosek+litera
+    continue
+    # Uzupełnij pętlę for poniżej.
+print(slowo_bez_samoglosek)
+# Wyświetl słowo przypisane do zmiennej slowo_bez_samoglosek.
+print("koniec")
+print()
+print("3.2.1.14 LABORATORIUM: Więcej o pętli while")
+blokow = int(input("Wprowadź liczbę bloków: "))
+b1=blokow
+wysokosc=0
+n=0
+while n<blokow:
+    wysokosc+=1
+    blokow=blokow-n
+    n+=1
+m=0
+b=0
+w=wysokosc
+while w!=0:
+    w-=1
+    m+=1
+    b=b+m
+if b!=b1:
+    wysokosc-=1
+print("Wysokość piramidy wynosi:", wysokosc)
+print()
+print("3.2.1.15 LABORATORIUM: Problem Collatza")
+print()
+c0=int(input("Wpisz dowolną nieujemną i niezerową liczbę całkowitą: "))
+liczba_krokow=0
+while c0!=1:
+    if c0%2==0:
+        c0/=2
+    else:
+        c0=3*c0+1
+    if c0!=1:
+        c0=c0
+    liczba_krokow+=1
+    print(c0)
+print("liczba kroków = ",liczba_krokow)
+print()
+print()
